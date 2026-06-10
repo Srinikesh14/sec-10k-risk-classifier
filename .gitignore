@@ -1,0 +1,11 @@
+# Environments
+.venv/
+env/
+__pycache__/
+
+# Mac/Windows hidden files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
