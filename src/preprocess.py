@@ -6,7 +6,7 @@ from datasets import load_dataset
 def fetch_and_prepare_data():
     """Stage 1: Load data from Hugging Face via streaming to bypass large downloads."""
     print("--- Starting Stage 1: Data Extraction ---")
-    print("Streaming dataset from Hugging Face (Grabbing 1500 rows)...")
+    print("Streaming dataset from Hugging Face (Grabbing 2500 rows)...")
     
     # Add streaming=True to avoid downloading the massive underlying files
     dataset = load_dataset("winterForestStump/10-K_sec_filings", split="001", streaming=True)
@@ -14,7 +14,7 @@ def fetch_and_prepare_data():
     # Stream exactly 500 rows directly into a list
     data_list = []
     for i, row in enumerate(dataset):
-        if i >= 1500:
+        if i >= 2500:
             break
         data_list.append(row)
         
